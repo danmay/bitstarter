@@ -8,10 +8,8 @@ fs.readFile("index.html", function(err, data) {
         buf = new Buffer(data);
 });  
 
-
-
 app.get('/', function(request, response) {
-  response.send(buf.toString() + " and more!");
+  response.send(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
